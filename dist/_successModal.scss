@@ -1,0 +1,43 @@
+.success-modal{
+    visibility: hidden;
+    z-index: -99;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: grid;
+    place-items: center;
+    &-box{
+        width: 40%;
+        padding: 2.5em;
+        border-radius: 0.5em;
+        background: white;
+        text-align: center;
+        line-height: 1.7em;
+        &-info{
+            margin: 1em 0;
+            color: rgba(0, 0, 0, 0.5);
+            font-weight: map-get($fontWeights, medium);
+        }
+        &-btn{
+            border: none;
+            background-color: $moderate-cyan;
+            border-radius: 1.5em;
+            width: 5rem;
+            height: 2rem;
+            color: white;
+            &:hover{
+                background-color: $Darkcyan;
+                cursor: pointer;
+            }
+        }
+
+    }
+}
+
+.success-modal.show{
+    visibility: visible;
+    z-index: 99;
+}

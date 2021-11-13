@@ -11,8 +11,10 @@
   place-items: center;
   &-container {
     width: 50vw;
+    // height: 30rem;
+    // overflow: scroll;
     background-color: white;
-    padding: 2em;
+    padding: 1em 2em;
     border-radius: 5px;
     text-align: center;
     position: relative;
@@ -61,7 +63,6 @@
         color: rgba(0, 0, 0, 0.6);
         margin-left: 4em;
         font-size: 0.7em;
-        border-bottom: 1px solid $Lightgray;
         padding-bottom: 2em;
       }
       &-number {
@@ -78,6 +79,7 @@
       //TOGGLE THIS CLASS
      &-contain{
        display: none;
+        border-top: 1px solid $Lightgray;
         &-contribute{
         //   visibility: hidden;
         display: flex;
@@ -85,22 +87,28 @@
           margin: 1em 0;
           & .pledge-btn{
               margin-left: auto;
+              display: flex;
               & .input{
                   background-color: transparent;
                   margin-right: 1em;
                   padding:0 1em;
-                  width: 4.5rem;
+                  cursor: pointer;
+                  & input[type="number"]{
+                  background-color: transparent;
+                  width: 5rem;
                   height: 1.8rem;
+                  padding-left: 2em;
                   border: none;
                   border: 1px solid $moderate-cyan;
                   border-radius: 1em;
                   cursor: pointer;
+                  }
               }
               & .continue{
                   background-color: $moderate-cyan;
                   margin-right: 1em;
                   padding:0 1em;
-                color: white;
+                  color: white;
                   height: 1.8rem;
                   border: none;
                   border: 1px solid $moderate-cyan;
@@ -125,3 +133,4 @@
 .pledge.show>.pledge-contain{
   display: block;
 }
+

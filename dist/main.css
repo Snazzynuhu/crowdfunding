@@ -312,7 +312,7 @@ body {
 .modal-overlay-container {
   width: 50vw;
   background-color: white;
-  padding: 2em;
+  padding: 1em 2em;
   border-radius: 5px;
   text-align: center;
   position: relative;
@@ -372,7 +372,6 @@ body {
   color: rgba(0, 0, 0, 0.6);
   margin-left: 4em;
   font-size: 0.7em;
-  border-bottom: 1px solid #e7e7e3;
   padding-bottom: 2em;
 }
 
@@ -390,6 +389,7 @@ body {
 
 .modal-overlay-container .pledge-contain {
   display: none;
+  border-top: 1px solid #e7e7e3;
 }
 
 .modal-overlay-container .pledge-contain-contribute {
@@ -401,14 +401,23 @@ body {
 
 .modal-overlay-container .pledge-contain-contribute .pledge-btn {
   margin-left: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .modal-overlay-container .pledge-contain-contribute .pledge-btn .input {
   background-color: transparent;
   margin-right: 1em;
   padding: 0 1em;
-  width: 4.5rem;
+  cursor: pointer;
+}
+
+.modal-overlay-container .pledge-contain-contribute .pledge-btn .input input[type="number"] {
+  background-color: transparent;
+  width: 5rem;
   height: 1.8rem;
+  padding-left: 2em;
   border: none;
   border: 1px solid #3cb4ac;
   border-radius: 1em;
@@ -438,5 +447,53 @@ body {
 
 .pledge.show > .pledge-contain {
   display: block;
+}
+
+.success-modal {
+  visibility: hidden;
+  z-index: -99;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.success-modal-box {
+  width: 40%;
+  padding: 2.5em;
+  border-radius: 0.5em;
+  background: white;
+  text-align: center;
+  line-height: 1.7em;
+}
+
+.success-modal-box-info {
+  margin: 1em 0;
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: 500;
+}
+
+.success-modal-box-btn {
+  border: none;
+  background-color: #3cb4ac;
+  border-radius: 1.5em;
+  width: 5rem;
+  height: 2rem;
+  color: white;
+}
+
+.success-modal-box-btn:hover {
+  background-color: #147b74;
+  cursor: pointer;
+}
+
+.success-modal.show {
+  visibility: visible;
+  z-index: 99;
 }
 /*# sourceMappingURL=main.css.map */

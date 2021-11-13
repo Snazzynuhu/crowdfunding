@@ -1,6 +1,9 @@
 const ctaBtn = document.querySelector(".cta-btn");
 const ctaBookmark = document.querySelector(".cta-bookmark");
 const slide = document.querySelector(".slide");
+const successModal = document.querySelector(".success-modal");
+const successModalBtn = document.querySelector(".success-modal-box-btn");
+
 ctaBookmark.addEventListener("click", ()=>{
     if(ctaBookmark.classList.contains("show")){
         ctaBookmark.classList.remove("show");
@@ -12,13 +15,26 @@ ctaBookmark.addEventListener("click", ()=>{
     }
 });
 
+ctaBtn.addEventListener("click", ()=>{
+    successModal.classList.add("show")
+});
+
+successModalBtn.addEventListener("click", ()=>{
+    modal.classList.add("show");
+    successModal.classList.remove("show")
+});
+
+
+const buttons = document.querySelectorAll(".button");
 const modal = document.querySelector(".modal-overlay");
 const modalClose = document.querySelector(".close-btn");
 
-
-ctaBtn.addEventListener("click", ()=>{
+buttons.forEach(Btn =>{
+Btn.addEventListener("click", ()=>{
     modal.classList.add("show");
-});
+})
+})
+
 modalClose.addEventListener("click", ()=>{
     modal.classList.remove("show");
 })
@@ -32,11 +48,5 @@ pledgeTitles.forEach(title =>{
         pledge.classList.toggle("show")
     })
 });
- const amountBtn = document.getElementById("amount-btn");
- const amount = document.querySelector(".amount");
- let currentAmount = 0;
- amountBtn.addEventListener("click", ()=>{
-     currentAmount++;
-     amount.innerText = currentAmount;
 
- })
+
