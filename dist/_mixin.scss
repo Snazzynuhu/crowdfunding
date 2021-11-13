@@ -2,7 +2,7 @@
 // - Desktop: 1440px
 
 @mixin mobile-view{
-    @media (max-width:23.435rem){
+    @media (max-width: 47.5rem){
         @content;
     }
 };
@@ -13,3 +13,5 @@
         @content;
     }
 };
+
+//47.5rem

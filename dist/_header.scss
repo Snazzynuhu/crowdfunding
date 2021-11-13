@@ -6,9 +6,32 @@
   display: flex;
   justify-content: space-between;
   padding: 3em 10.5em;
-  & .menu .menu-list {
+  display: flex;
+  @include mobile-view{
+    padding: 3em 2em;
+    background: url(../crowdfunding-product-page-main/images/image-hero-mobile.jpg);
+  }
+  & .menu{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    &-btn{
+      background: transparent;
+      border: none;
+      display: none;
+      @include mobile-view{
+        display: block;
+      }
+      &-close{
+        display: none;
+      }
+    }
+     &-list {
     display: flex;
     justify-content: space-between;
+    @include mobile-view{
+      display: none;
+    }
     & li {
       list-style: none;
       padding: 0 1em;
@@ -20,4 +43,47 @@
       }
     }
   }
+  }
+ 
+}
+
+
+//TOGGLE JS CLASSES
+
+   .show.header .menu-list {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    @include mobile-view{
+      display: block;
+      background: white;
+      width: 80vw;
+      border-radius: 0.5em;
+      position: absolute;
+      left: 10%;
+      top: 20%;
+      margin: 0 auto;
+      z-index: 3;
+    }
+    & li {
+      list-style: none;
+      padding: 1.1em 1em;
+      color:  darkgray;
+      border-bottom: 1px solid lightgray;
+      &:hover {
+        cursor: pointer;
+        transform: translateX(5px);
+        transition: transform 0.5s ease-in;
+        color: black;
+      }
+    }
+  }
+
+
+.show .menu-btn-hamburger{
+  display: none;
+};
+
+.show .menu-btn-close{
+  display: inline-block;
 }

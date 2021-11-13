@@ -43,10 +43,19 @@ const pledgeTitles = document.querySelectorAll(".pledge-title");
 const pledgeContribute = document.querySelector(".pledge-contribute");
 
 pledgeTitles.forEach(title =>{
-    title.addEventListener("click", (e)=>{
+    title.addEventListener("click", (e)=>{  
       const pledge = e.currentTarget.parentElement;
         pledge.classList.toggle("show")
     })
 });
 
 
+const menuBtn = document.querySelector(".menu-btn");
+const header = document.querySelector('.header')
+
+menuBtn.addEventListener("click", toggleMenu);
+function toggleMenu(){
+    menuBtn.classList.toggle("show");
+    header.classList.toggle("show");
+
+}
