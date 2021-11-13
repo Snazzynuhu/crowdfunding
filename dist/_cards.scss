@@ -1,0 +1,210 @@
+.cards{
+    width: auto;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(50%, 0);
+    .card-one{
+        position: relative;
+        width: 50vw;
+        min-height: 12rem;
+        background-color: white;
+        margin: 0 auto;
+        padding: 3em 0;
+        border-radius: 5px;
+        text-align: center;
+        & .title{
+            margin-bottom: 1em;
+        }
+          & .title-details{
+            margin-bottom: 1em;
+            color: rgba(0, 0, 0, 0.7);
+        }
+        & .logo{
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        & .cta{
+            display: flex;
+            justify-content: space-between;
+            padding: 1em 3em 0 3em;
+            &-btn{
+                background-color: $moderate-cyan;
+                width: 12rem;
+                height: 3rem;
+                border-radius: 1.5rem;
+                border: none;
+                color: white;
+                font-weight: map-get($fontWeights, medium);
+                &:hover{
+                    cursor: pointer;
+                    background-color: $Darkcyan;
+                }
+            }
+            &-bookmark{
+                color: rgba(0, 0, 0, 0.6);
+                width: 12rem;
+                height: 3rem;
+                border-radius: 1.5rem;
+                border: none;
+                background-color: $Lightgray;
+                font-weight: map-get($fontWeights, bold);
+                position: relative;
+                &:hover{
+                    cursor: pointer;
+                }
+                & .slide{
+                padding-left: 2em;
+                }
+                & .circle{
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    width: 3rem;
+                    height: 3rem;
+                    border-radius: 50%;
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+    .stats{
+        position: relative;
+        width: 50vw;
+        min-height: 12rem;
+        background-color: white;
+        margin: 0 auto;
+        padding: 3em 0;
+        border-radius: 5px;
+        text-align: center;
+        margin-top: 1em;
+        &-content{
+            display: flex;
+            justify-content: space-around;
+            text-align: left;
+            padding: 0 2em;
+            & .backed, .total-backers, .days-left{
+                padding-right: 3em;
+                & h1{
+                    font-size: 2.2rem;
+                }
+                & h5{
+                    color: rgba(0, 0, 0, 0.5);
+                }
+            }
+        }
+        &-progress{
+         width: 85%;
+         height: 0.5rem;
+         border-radius: 5px;
+         background-color: $Lightgray;
+         margin: 2em auto 0;
+         & .fill{
+             display: block;
+             width: 80%;
+             height: 0.5rem;
+             border-radius: 5px;
+             background-color: $Darkcyan;
+         }
+        
+
+        }
+    }
+    .section-two{
+         position: relative;
+        width: 50vw;
+        min-height: 12rem;
+        background-color: white;
+        margin: 0 auto;
+        padding: 2em 3em;
+        border-radius: 5px;
+        text-align: left;
+        margin-top: 1em;
+        line-height: 1.8em;
+        .about{
+            &-title{
+                font-size: 1.25rem;
+                font-weight: map-get($fontWeights, bold);
+            }
+            &-info{
+                color: rgba(0, 0, 0, 0.5);
+                font-weight: map-get($fontWeights, medium);
+            }
+        }
+        .stand{
+            border: 1px solid lightgray;
+            padding: 1em 2em;
+            margin-top: 1em;
+            border-radius: 0.5em;
+            &-header{
+                display: flex;
+                justify-content: space-between;
+                & .title{
+                  font-size: 1.25rem;  
+                }
+                & .pledge{
+                    font-size: 1em;
+                    color: $moderate-cyan;
+                }
+            }
+            &-info{
+                color: rgba(0, 0, 0, 0.5);
+                margin: 1em 0;
+            }
+            & .bottom-details{
+                display: flex;
+                justify-content: space-between;
+                & .number{
+                    font-size: 2rem;
+                    & .left{
+                        color: rgba(214, 186, 186, 0.5);
+                        font-size: .5em;
+                    }
+                }
+                & .button{
+                background-color: $moderate-cyan;
+                width: 9rem;
+                border-radius: 1.5rem;
+                border: none;
+                color: white;
+                padding: 1em;
+                font-weight: map-get($fontWeights, normal);
+                &:hover{
+                    background-color: $Darkcyan;
+                    cursor: pointer;
+                }
+                }
+            }
+        }
+    }
+};
+
+
+// STYLE TO BE ADDED WITH JS FOR ZERO DONATION
+
+.stand.zero-donation{
+    color: rgba(0, 0, 0, 0.5);
+       & .bottom-details.zero-donation{
+           .button{
+           background-color: $Lightgray;
+       }  
+       }
+}
+
+
+// ADD CLICK EVENT TO TRIGGER STYLE ON BOOKMARK BTN
+.cta-bookmark.show{
+    & .circle{
+        .svg path{
+            fill: white;
+        } 
+         & .svg circle{
+            fill: $Darkcyan;
+        }   
+    }
+    & .slide{
+            color: $Darkcyan;
+        }
+}

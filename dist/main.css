@@ -1,0 +1,434 @@
+.header {
+  width: 100%;
+  height: 25rem;
+  background: url(../crowdfunding-product-page-main/images/image-hero-desktop.jpg);
+  background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 3em 10.5em;
+}
+
+.header .menu .menu-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header .menu .menu-list li {
+  list-style: none;
+  padding: 0 1em;
+  color: white;
+}
+
+.header .menu .menu-list li:hover {
+  cursor: pointer;
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+  -webkit-transition: -webkit-transform 0.5s ease-in;
+  transition: -webkit-transform 0.5s ease-in;
+  transition: transform 0.5s ease-in;
+  transition: transform 0.5s ease-in, -webkit-transform 0.5s ease-in;
+}
+
+*, body, html {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #e7e7e3;
+}
+
+.cards {
+  width: auto;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translate(50%, 0);
+          transform: translate(50%, 0);
+}
+
+.cards .card-one {
+  position: relative;
+  width: 50vw;
+  min-height: 12rem;
+  background-color: white;
+  margin: 0 auto;
+  padding: 3em 0;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.cards .card-one .title {
+  margin-bottom: 1em;
+}
+
+.cards .card-one .title-details {
+  margin-bottom: 1em;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.cards .card-one .logo {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.cards .card-one .cta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1em 3em 0 3em;
+}
+
+.cards .card-one .cta-btn {
+  background-color: #3cb4ac;
+  width: 12rem;
+  height: 3rem;
+  border-radius: 1.5rem;
+  border: none;
+  color: white;
+  font-weight: 500;
+}
+
+.cards .card-one .cta-btn:hover {
+  cursor: pointer;
+  background-color: #147b74;
+}
+
+.cards .card-one .cta-bookmark {
+  color: rgba(0, 0, 0, 0.6);
+  width: 12rem;
+  height: 3rem;
+  border-radius: 1.5rem;
+  border: none;
+  background-color: #e7e7e3;
+  font-weight: 700;
+  position: relative;
+}
+
+.cards .card-one .cta-bookmark:hover {
+  cursor: pointer;
+}
+
+.cards .card-one .cta-bookmark .slide {
+  padding-left: 2em;
+}
+
+.cards .card-one .cta-bookmark .circle {
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: transparent;
+}
+
+.cards .stats {
+  position: relative;
+  width: 50vw;
+  min-height: 12rem;
+  background-color: white;
+  margin: 0 auto;
+  padding: 3em 0;
+  border-radius: 5px;
+  text-align: center;
+  margin-top: 1em;
+}
+
+.cards .stats-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  text-align: left;
+  padding: 0 2em;
+}
+
+.cards .stats-content .backed, .cards .stats-content .total-backers, .cards .stats-content .days-left {
+  padding-right: 3em;
+}
+
+.cards .stats-content .backed h1, .cards .stats-content .total-backers h1, .cards .stats-content .days-left h1 {
+  font-size: 2.2rem;
+}
+
+.cards .stats-content .backed h5, .cards .stats-content .total-backers h5, .cards .stats-content .days-left h5 {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.cards .stats-progress {
+  width: 85%;
+  height: 0.5rem;
+  border-radius: 5px;
+  background-color: #e7e7e3;
+  margin: 2em auto 0;
+}
+
+.cards .stats-progress .fill {
+  display: block;
+  width: 80%;
+  height: 0.5rem;
+  border-radius: 5px;
+  background-color: #147b74;
+}
+
+.cards .section-two {
+  position: relative;
+  width: 50vw;
+  min-height: 12rem;
+  background-color: white;
+  margin: 0 auto;
+  padding: 2em 3em;
+  border-radius: 5px;
+  text-align: left;
+  margin-top: 1em;
+  line-height: 1.8em;
+}
+
+.cards .section-two .about-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.cards .section-two .about-info {
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: 500;
+}
+
+.cards .section-two .stand {
+  border: 1px solid lightgray;
+  padding: 1em 2em;
+  margin-top: 1em;
+  border-radius: 0.5em;
+}
+
+.cards .section-two .stand-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.cards .section-two .stand-header .title {
+  font-size: 1.25rem;
+}
+
+.cards .section-two .stand-header .pledge {
+  font-size: 1em;
+  color: #3cb4ac;
+}
+
+.cards .section-two .stand-info {
+  color: rgba(0, 0, 0, 0.5);
+  margin: 1em 0;
+}
+
+.cards .section-two .stand .bottom-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.cards .section-two .stand .bottom-details .number {
+  font-size: 2rem;
+}
+
+.cards .section-two .stand .bottom-details .number .left {
+  color: rgba(214, 186, 186, 0.5);
+  font-size: .5em;
+}
+
+.cards .section-two .stand .bottom-details .button {
+  background-color: #3cb4ac;
+  width: 9rem;
+  border-radius: 1.5rem;
+  border: none;
+  color: white;
+  padding: 1em;
+  font-weight: 400;
+}
+
+.cards .section-two .stand .bottom-details .button:hover {
+  background-color: #147b74;
+  cursor: pointer;
+}
+
+.stand.zero-donation {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.stand.zero-donation .bottom-details.zero-donation .button {
+  background-color: #e7e7e3;
+}
+
+.cta-bookmark.show .circle .svg path {
+  fill: white;
+}
+
+.cta-bookmark.show .circle .svg circle {
+  fill: #147b74;
+}
+
+.cta-bookmark.show .slide {
+  color: #147b74;
+}
+
+.modal-overlay {
+  z-index: -99;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.modal-overlay-container {
+  width: 50vw;
+  background-color: white;
+  padding: 2em;
+  border-radius: 5px;
+  text-align: center;
+  position: relative;
+}
+
+.modal-overlay-container .close-btn {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  background-color: transparent;
+  border: none;
+}
+
+.modal-overlay-container .close-btn-svg g {
+  fill: black;
+}
+
+.modal-overlay-container .close-btn-svg g:hover {
+  cursor: pointer;
+  fill: red;
+}
+
+.modal-overlay-container .heading {
+  font-size: 1.2rem;
+  text-align: left;
+}
+
+.modal-overlay-container .heading-sub {
+  display: block;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 0.5em;
+  margin: 0.8em 0;
+}
+
+.modal-overlay-container .pledge {
+  border: 1px solid lightgray;
+  border-radius: 0.7rem;
+  text-align: left;
+  padding: 1em;
+  font-size: 0.5rem;
+  line-height: 3em;
+  margin-bottom: 2em;
+  position: relative;
+}
+
+.modal-overlay-container .pledge-title {
+  margin-left: 1em;
+  font-weight: 700;
+}
+
+.modal-overlay-container .pledge-title:hover {
+  color: #3cb4ac;
+  cursor: pointer;
+}
+
+.modal-overlay-container .pledge-info {
+  color: rgba(0, 0, 0, 0.6);
+  margin-left: 4em;
+  font-size: 0.7em;
+  border-bottom: 1px solid #e7e7e3;
+  padding-bottom: 2em;
+}
+
+.modal-overlay-container .pledge-number {
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+}
+
+.modal-overlay-container .pledge-number span {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 0.5em;
+  font-weight: light;
+}
+
+.modal-overlay-container .pledge-contribute.show {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 1em 0;
+}
+
+.modal-overlay-container .pledge-contribute.show .pledge-btn {
+  margin-left: auto;
+}
+
+.modal-overlay-container .pledge-contribute.show .pledge-btn .input {
+  background-color: transparent;
+  margin-right: 1em;
+  padding: 0 1em;
+  width: 4.5rem;
+  height: 1.8rem;
+  border: none;
+  border: 1px solid #3cb4ac;
+  border-radius: 1em;
+  cursor: pointer;
+}
+
+.modal-overlay-container .pledge-contribute.show .pledge-btn .continue {
+  background-color: #3cb4ac;
+  margin-right: 1em;
+  padding: 0 1em;
+  color: white;
+  height: 1.8rem;
+  border: none;
+  border: 1px solid #3cb4ac;
+  border-radius: 1em;
+}
+
+.modal-overlay-container .pledge-contribute.show .pledge-btn .continue:hover {
+  background-color: #147b74;
+  cursor: pointer;
+}
+
+.modal-overlay.show {
+  z-index: 99;
+  opacity: 1;
+}
+/*# sourceMappingURL=main.css.map */

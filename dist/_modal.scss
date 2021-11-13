@@ -1,0 +1,120 @@
+.modal-overlay{
+  z-index: -99;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  display: grid;
+  place-items: center;
+  &-container {
+    width: 50vw;
+    background-color: white;
+    padding: 2em;
+    border-radius: 5px;
+    text-align: center;
+    position: relative;
+    & .close-btn {
+      position: absolute;
+      top: 1em;
+      right: 1em;
+      background-color: transparent;
+      border: none;
+      &-svg g {
+        fill: black;
+        &:hover {
+          cursor: pointer;
+          fill: red;
+        }
+      }
+    }
+    & .heading {
+      font-size: 1.2rem;
+      text-align: left;
+      &-sub {
+        display: block;
+        color: rgba(0, 0, 0, 0.6);
+        font-size: 0.5em;
+        margin: 0.8em 0;
+      }
+    }
+    & .pledge {
+      border: 1px solid lightgray;
+      border-radius: 0.7rem;
+      text-align: left;
+      padding: 1em;
+      font-size: 0.5rem;
+      line-height: 3em;
+      margin-bottom: 2em;
+      position: relative;
+      &-title {
+        margin-left: 1em;
+        font-weight: map-get($fontWeights, bold);
+        &:hover {
+          color: $moderate-cyan;
+          cursor: pointer;
+        }
+      }
+      &-info {
+        color: rgba(0, 0, 0, 0.6);
+        margin-left: 4em;
+        font-size: 0.7em;
+        border-bottom: 1px solid $Lightgray;
+        padding-bottom: 2em;
+      }
+      &-number {
+        position: absolute;
+        top: 1rem;
+        right: 2rem;
+        & span {
+          color: rgba(0, 0, 0, 0.6);
+          font-size: 0.5em;
+          font-weight: light;
+        }
+      }
+
+      //TOGGLE THIS CLASS
+      &-contribute.show{
+        //   visibility: hidden;
+        //   display: none;
+          display: flex;
+          margin: 1em 0;
+          & .pledge-btn{
+              margin-left: auto;
+              & .input{
+                  background-color: transparent;
+                  margin-right: 1em;
+                  padding:0 1em;
+                  width: 4.5rem;
+                  height: 1.8rem;
+                  border: none;
+                  border: 1px solid $moderate-cyan;
+                  border-radius: 1em;
+                  cursor: pointer;
+              }
+              & .continue{
+                  background-color: $moderate-cyan;
+                  margin-right: 1em;
+                  padding:0 1em;
+                color: white;
+                  height: 1.8rem;
+                  border: none;
+                  border: 1px solid $moderate-cyan;
+                  border-radius: 1em;
+                  &:hover{
+                      background-color: $Darkcyan;
+                      cursor: pointer;
+                  }
+              }
+          }
+      }
+    }
+  }
+}
+
+.modal-overlay.show{
+    z-index: 99;
+    opacity: 1;
+}

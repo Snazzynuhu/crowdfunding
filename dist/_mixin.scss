@@ -1,0 +1,15 @@
+// - Mobile: 375px
+// - Desktop: 1440px
+
+@mixin mobile-view{
+    @media (max-width:23.435rem){
+        @content;
+    }
+};
+
+
+@mixin desktop-view{
+    @media (max-width:90rem){
+        @content;
+    }
+};
