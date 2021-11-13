@@ -388,18 +388,22 @@ body {
   font-weight: light;
 }
 
-.modal-overlay-container .pledge-contribute.show {
+.modal-overlay-container .pledge-contain {
+  display: none;
+}
+
+.modal-overlay-container .pledge-contain-contribute {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin: 1em 0;
 }
 
-.modal-overlay-container .pledge-contribute.show .pledge-btn {
+.modal-overlay-container .pledge-contain-contribute .pledge-btn {
   margin-left: auto;
 }
 
-.modal-overlay-container .pledge-contribute.show .pledge-btn .input {
+.modal-overlay-container .pledge-contain-contribute .pledge-btn .input {
   background-color: transparent;
   margin-right: 1em;
   padding: 0 1em;
@@ -411,7 +415,7 @@ body {
   cursor: pointer;
 }
 
-.modal-overlay-container .pledge-contribute.show .pledge-btn .continue {
+.modal-overlay-container .pledge-contain-contribute .pledge-btn .continue {
   background-color: #3cb4ac;
   margin-right: 1em;
   padding: 0 1em;
@@ -422,7 +426,7 @@ body {
   border-radius: 1em;
 }
 
-.modal-overlay-container .pledge-contribute.show .pledge-btn .continue:hover {
+.modal-overlay-container .pledge-contain-contribute .pledge-btn .continue:hover {
   background-color: #147b74;
   cursor: pointer;
 }
@@ -430,5 +434,9 @@ body {
 .modal-overlay.show {
   z-index: 99;
   opacity: 1;
+}
+
+.pledge.show > .pledge-contain {
+  display: block;
 }
 /*# sourceMappingURL=main.css.map */

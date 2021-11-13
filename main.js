@@ -25,15 +25,18 @@ modalClose.addEventListener("click", ()=>{
 
 const pledgeTitles = document.querySelectorAll(".pledge-title");
 const pledgeContribute = document.querySelector(".pledge-contribute");
+
 pledgeTitles.forEach(title =>{
     title.addEventListener("click", (e)=>{
-        // if(e.target.classList.contains("show")){
-        //     e.target.classList.remove("show");
-        // }
-        // else{
-        //     e.target.classList.add("show");
-        // }
-pledgeContribute.classList.toggle("show");
+      const pledge = e.currentTarget.parentElement;
+        pledge.classList.toggle("show")
     })
-})
+});
+ const amountBtn = document.getElementById("amount-btn");
+ const amount = document.querySelector(".amount");
+ let currentAmount = 0;
+ amountBtn.addEventListener("click", ()=>{
+     currentAmount++;
+     amount.innerText = currentAmount;
 
+ })

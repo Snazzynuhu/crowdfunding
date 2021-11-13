@@ -76,10 +76,12 @@
       }
 
       //TOGGLE THIS CLASS
-      &-contribute.show{
+     &-contain{
+       display: none;
+        &-contribute{
         //   visibility: hidden;
-        //   display: none;
-          display: flex;
+        display: flex;
+        // display: none;
           margin: 1em 0;
           & .pledge-btn{
               margin-left: auto;
@@ -110,6 +112,7 @@
               }
           }
       }
+     }
     }
   }
 }
@@ -117,4 +120,8 @@
 .modal-overlay.show{
     z-index: 99;
     opacity: 1;
+};
+
+.pledge.show>.pledge-contain{
+  display: block;
 }
