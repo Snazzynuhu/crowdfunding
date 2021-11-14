@@ -18,6 +18,12 @@
     border-radius: 5px;
     text-align: center;
     position: relative;
+    @include mobile-view{
+      width: 80vw;
+      height: 90vh;
+      overflow: scroll;
+      padding: auto;
+    }
     & .close-btn {
       position: absolute;
       top: 1em;
@@ -54,9 +60,17 @@
       &-title {
         margin-left: 1em;
         font-weight: map-get($fontWeights, bold);
+        display: flex;
+        position: absolute;
+        top: 1em;
+        left: 5em;
         &:hover {
           color: $moderate-cyan;
           cursor: pointer;
+        }
+        @include mobile-view{
+          display: flex;
+          flex-direction: column;
         }
       }
       &-info {
@@ -64,6 +78,9 @@
         margin-left: 4em;
         font-size: 0.7em;
         padding-bottom: 2em;
+        @include mobile-view{
+          margin-top: 5em;
+        }
       }
       &-number {
         position: absolute;

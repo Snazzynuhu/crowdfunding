@@ -19,6 +19,7 @@
       background: transparent;
       border: none;
       display: none;
+      cursor: pointer;
       @include mobile-view{
         display: block;
       }

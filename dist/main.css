@@ -36,6 +36,7 @@
   background: transparent;
   border: none;
   display: none;
+  cursor: pointer;
 }
 
 @media (max-width: 47.5rem) {
@@ -141,7 +142,6 @@ body {
 }
 
 .cards {
-  width: auto;
   position: absolute;
   top: 50%;
   left: 0;
@@ -386,6 +386,15 @@ body {
           justify-content: space-between;
 }
 
+@media (max-width: 47.5rem) {
+  .cards .section-two .stand-header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .cards .section-two .stand-header .title {
   font-size: 1.25rem;
 }
@@ -407,6 +416,15 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+@media (max-width: 47.5rem) {
+  .cards .section-two .stand .bottom-details {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .cards .section-two .stand .bottom-details .number {
@@ -476,6 +494,15 @@ body {
   position: relative;
 }
 
+@media (max-width: 47.5rem) {
+  .modal-overlay-container {
+    width: 80vw;
+    height: 90vh;
+    overflow: scroll;
+    padding: auto;
+  }
+}
+
 .modal-overlay-container .close-btn {
   position: absolute;
   top: 1em;
@@ -519,6 +546,12 @@ body {
 .modal-overlay-container .pledge-title {
   margin-left: 1em;
   font-weight: 700;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  top: 1em;
+  left: 5em;
 }
 
 .modal-overlay-container .pledge-title:hover {
@@ -526,11 +559,29 @@ body {
   cursor: pointer;
 }
 
+@media (max-width: 47.5rem) {
+  .modal-overlay-container .pledge-title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .modal-overlay-container .pledge-info {
   color: rgba(0, 0, 0, 0.6);
   margin-left: 4em;
   font-size: 0.7em;
   padding-bottom: 2em;
+}
+
+@media (max-width: 47.5rem) {
+  .modal-overlay-container .pledge-info {
+    margin-top: 5em;
+  }
 }
 
 .modal-overlay-container .pledge-number {
@@ -628,6 +679,13 @@ body {
   background: white;
   text-align: center;
   line-height: 1.7em;
+}
+
+@media (max-width: 47.5rem) {
+  .success-modal-box {
+    padding: 2em 1em;
+    width: 70%;
+  }
 }
 
 .success-modal-box-info {

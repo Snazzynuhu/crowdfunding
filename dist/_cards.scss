@@ -1,5 +1,5 @@
 .cards {
-  width: auto;
+  // width: auto;
   position: absolute;
   top: 50%;
   left: 0;
@@ -171,6 +171,9 @@
       &-header {
         display: flex;
         justify-content: space-between;
+        @include mobile-view{
+          flex-direction: column;
+        }
         & .title {
           font-size: 1.25rem;
         }
@@ -186,6 +189,9 @@
       & .bottom-details {
         display: flex;
         justify-content: space-between;
+        @include mobile-view{
+          flex-direction: column;
+        }
         & .number {
           font-size: 2rem;
           & .left {

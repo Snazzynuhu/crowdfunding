@@ -16,6 +16,10 @@
         background: white;
         text-align: center;
         line-height: 1.7em;
+        @include mobile-view{
+            padding: 2em 1em ;
+            width: 70%;
+        }
         &-info{
             margin: 1em 0;
             color: rgba(0, 0, 0, 0.5);
